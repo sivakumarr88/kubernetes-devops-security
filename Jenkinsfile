@@ -12,6 +12,9 @@ pipeline {
 			steps {
 				sh "mvn test"
 			}
+			post {
+				junit 'target/*.xml'
+			}
 		}
 	}
 }
