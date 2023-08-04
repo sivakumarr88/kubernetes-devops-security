@@ -13,7 +13,9 @@ pipeline {
 				sh "mvn test"
 			}
 			post {
-				junit 'target/*.xml'
+				always {
+					junit 'target/reports/**/*.xml'
+				}
 			}
 		}
 	}
