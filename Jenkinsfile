@@ -15,6 +15,9 @@ pipeline {
 			post {
 				always {
 					junit 'target/reports/**/*.xml'
+					jacoco(
+                		execPattern: '**/build/jacoco/*.exec'
+                	)
 				}
 			}
 		}
