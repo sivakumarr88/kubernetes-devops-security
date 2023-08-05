@@ -12,5 +12,10 @@ pipeline {
 				sh "mvn test"
 			}
 		}
+		stage('Krishna') {
+			steps {
+				sh "echo krishna pipeline"
+			}
+		}
 	}
 }
